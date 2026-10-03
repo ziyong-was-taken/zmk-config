@@ -43,6 +43,86 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+
+        lshift_trans: lshift_trans {
+            compatible = "zmk,behavior-mod-morph";
+            label = "LSHFT_TRANS";
+            bindings = <&kp LSHIFT>, <&trans>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_RCTL|MOD_RSFT|MOD_RALT|MOD_RGUI)>;
+            keep-mods = <(MOD_RCTL|MOD_RSFT|MOD_RALT|MOD_RGUI)>;
+        };
+
+        lctrl_trans: lctrl_trans {
+            compatible = "zmk,behavior-mod-morph";
+            label = "LCTRL_TRANS";
+            bindings = <&kp LCTRL>, <&trans>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_RCTL|MOD_RSFT|MOD_RALT|MOD_RGUI)>;
+            keep-mods = <(MOD_RCTL|MOD_RSFT|MOD_RALT|MOD_RGUI)>;
+        };
+
+        lalt_trans: lalt_trans {
+            compatible = "zmk,behavior-mod-morph";
+            label = "LALT_TRANS";
+            bindings = <&kp LALT>, <&trans>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_RCTL|MOD_RSFT|MOD_RALT|MOD_RGUI)>;
+            keep-mods = <(MOD_RCTL|MOD_RSFT|MOD_RALT|MOD_RGUI)>;
+        };
+
+        lgui_trans: lgui_trans {
+            compatible = "zmk,behavior-mod-morph";
+            label = "LGUI_TRANS";
+            bindings = <&kp LGUI>, <&trans>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_RCTL|MOD_RSFT|MOD_RALT|MOD_RGUI)>;
+            keep-mods = <(MOD_RCTL|MOD_RSFT|MOD_RALT|MOD_RGUI)>;
+        };
+
+        rshift_trans: rshift_trans {
+            compatible = "zmk,behavior-mod-morph";
+            label = "RSHFT_TRANS";
+            bindings = <&kp RSHIFT>, <&trans>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LCTL|MOD_LSFT|MOD_LALT|MOD_LGUI)>;
+            keep-mods = <(MOD_LCTL|MOD_LSFT|MOD_LALT|MOD_LGUI)>;
+        };
+
+        rctrl_trans: rctrl_trans {
+            compatible = "zmk,behavior-mod-morph";
+            label = "RCTRL_TRANS";
+            bindings = <&kp RCTRL>, <&trans>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LCTL|MOD_LSFT|MOD_LALT|MOD_LGUI)>;
+            keep-mods = <(MOD_LCTL|MOD_LSFT|MOD_LALT|MOD_LGUI)>;
+        };
+
+        ralt_trans: ralt_trans {
+            compatible = "zmk,behavior-mod-morph";
+            label = "RALT_TRANS";
+            bindings = <&kp RALT>, <&trans>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LCTL|MOD_LSFT|MOD_LALT|MOD_LGUI)>;
+            keep-mods = <(MOD_LCTL|MOD_LSFT|MOD_LALT|MOD_LGUI)>;
+        };
+
+        rgui_trans: rgui_trans {
+            compatible = "zmk,behavior-mod-morph";
+            label = "RGUI_TRANS";
+            bindings = <&kp RGUI>, <&trans>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LCTL|MOD_LSFT|MOD_LALT|MOD_LGUI)>;
+            keep-mods = <(MOD_LCTL|MOD_LSFT|MOD_LALT|MOD_LGUI)>;
+        };
     };
 
     keymap {
@@ -109,10 +189,10 @@
             //           | 🔓 |    |    |    |    |    |    |
 
             bindings = <
-                &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                &trans  &trans          &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                        &studio_unlock  &trans  &trans  &trans  &trans  &trans
+                &trans       &trans          &trans        &trans         &trans  &trans  &trans         &trans        &trans       &trans
+                &lgui_trans  &lalt_trans     &lctrl_trans  &lshift_trans  &trans  &trans  &rshift_trans  &rctrl_trans  &ralt_trans  &rgui_trans
+                &trans       &trans          &trans        &trans         &trans  &trans  &trans         &trans        &trans       &trans
+                             &studio_unlock  &trans        &trans         &trans  &trans  &trans
             >;
         };
     };
