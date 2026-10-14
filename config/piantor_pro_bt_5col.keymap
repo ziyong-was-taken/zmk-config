@@ -153,7 +153,7 @@
             // -------------------------------------------------------------------
             // |  @  |  ^  |  #  |  /  |  ~  |     |  (  |  7  |  8  |  9  |  )  |
             // |  %  |  _  |  *  |  \  |  `  |     |  {  |  4  |  5  |  6  |  }  |
-            // |  &  |  $  |  <  |  |  |  >  |     |  [  |  1  |  2  | 3   |  ]  |
+            // |  &  |  $  |  <  |  |  |  >  |     |  [  |  1  |  2  |  3  |  ]  |
             //             | SYS |  ?  |  !  |     |  =  | MOD |  0  |
 
             bindings = <
@@ -168,16 +168,16 @@
             display-name = "SYSTEM";
 
             // ------------------------------------------------------------------------------
-            // |  F1  |  F2  |  F3  |  F4  | VOLU |      | BRIU | HOME | PGDN | PGUP | END  |
-            // | 🖱️⬅️ | 🖱️⬆️ | 🖱️⬇️ | 🖱️➡️ | ESC  |      | MENU | LEFT | RGHT | UP   | DOWN |
-            // |  F1  |  F2  |  F3  |  F4  | VOLD |      | BRID |  F8  |  F9  | F10  | F11  |
-            //               | TEXT | RCLK | LCLK |      |      | SCRD | SCRU |
+            // | F1 | F2 |  F3  |  F4  | VOLU |      | BRIU | HOME | PGDN | PGUP | END  |
+            // | 🖰← | 🖰↑ |  🖰↓  |  🖰→  | ESC  |      | MENU | LEFT | DOWN |  UP  | RGHT |
+            // | F5 | F6 |  F7  |  F8  | VOLD |      | BRID |  F9  | F10  | F11  | F12  |
+            //           | TEXT | LCLK | RCLK |      | SCRD | MOD  | SCRU |
 
             bindings = <
-                &kp F1          &kp F2        &kp F3        &kp F4           &kp C_VOLUME_UP    &kp C_BRIGHTNESS_INC  &kp HOME  &kp PAGE_DOWN  &kp PAGE_UP  &kp END
-                &mmv MOVE_LEFT  &mmv MOVE_UP  &mmv MOVE_UP  &mmv MOVE_RIGHT  &kp ESCAPE         &kp K_APPLICATION     &kp LEFT  &kp DOWN       &kp UP       &kp RIGHT
-                &kp F5          &kp F6        &kp F7        &kp F8           &kp C_VOLUME_DOWN  &kp C_BRIGHTNESS_DEC  &kp F9    &kp F10        &kp F11      &kp F12
-                                              &to TEXT      &mkp LCLK        &mkp RCLK          &msc SCRL_DOWN        &mo MOD   &msc SCRL_UP
+                &kp F1          &kp F2        &kp F3          &kp F4           &kp C_VOLUME_UP    &kp C_BRIGHTNESS_INC  &kp HOME  &kp PAGE_DOWN  &kp PAGE_UP  &kp END
+                &mmv MOVE_LEFT  &mmv MOVE_UP  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &kp ESCAPE         &kp K_APPLICATION     &kp LEFT  &kp DOWN       &kp UP       &kp RIGHT
+                &kp F5          &kp F6        &kp F7          &kp F8           &kp C_VOLUME_DOWN  &kp C_BRIGHTNESS_DEC  &kp F9    &kp F10        &kp F11      &kp F12
+                                              &to TEXT        &mkp LCLK        &mkp RCLK          &msc SCRL_DOWN        &mo MOD   &msc SCRL_UP
             >;
         };
 
