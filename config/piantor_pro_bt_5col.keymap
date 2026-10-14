@@ -131,7 +131,7 @@
         compatible = "zmk,keymap";
 
         text_layer {
-            display-name = "COLEMAK";
+            display-name = "TEXT";
 
             // -------------------------------------------------------------------
             // |  Q  |  W  |  F  |  P  |  G  |     |  J  |  L  |  U  |  Y  | '/" |
